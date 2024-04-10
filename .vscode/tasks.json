@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-o",
+                "my_sdl_program",
+                "src/Main.cpp",
+                "src/Game.cpp",
+                "src/Login.cpp",
+                "src/PasswordManager.cpp",
+                "-Iinclude", // Update this line to include the include directory
+                "-I/opt/homebrew/opt/sdl2/include/sdl2",
+                "-L/opt/homebrew/opt/sdl2/lib",
+                "-lSDL2"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
